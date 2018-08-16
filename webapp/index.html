@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="UTF-8">
+
+		<title>hello_world</title>
+
+		<script id="sap-ui-bootstrap"
+			src="../../resources/sap-ui-core.js"
+			data-sap-ui-libs="sap.m"
+			data-sap-ui-theme="sap_belize"
+			data-sap-ui-compatVersion="edge"
+			 data-sap-ui-preload="async" 
+			data-sap-ui-resourceroots='{"com.sap.learning.ui5.gs.hello_world": "./"}'>
+		</script>
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<script>
+		    // a standard way to get the sap UI5 core and it can be accessed anywhere as it is a singleton
+		    // here we register a callback class for its init event
+			sap.ui.getCore().attachInit(function() {
+				// var view_Hello = new sap.ui.xmlview({
+    //         	   viewName : "com.sap.learning.ui5.gs.hello_world.view.Hello"
+    //         	});
+    //         	view_Hello.placeAt("content");
+                new sap.m.Shell({
+                    // backgroundImage : "http://www.z4a.net/image/7nuGAC",
+                    // backgroundColor : "#000",
+                    // backgroundRepeat : true,
+                    app : new sap.ui.core.ComponentContainer({
+							height : "100%",
+				    		name : "com.sap.learning.ui5.gs.hello_world",
+							settings : {
+								id : "hello"
+					        }
+				        })
+                }).placeAt("content");
+				
+			});
+		</script>
+	</head>
+
+	<body class="sapUiBody" id="content">
+	</body>
+
+</html>

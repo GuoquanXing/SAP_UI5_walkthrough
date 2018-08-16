@@ -1,0 +1,16 @@
+<mvc:View controllerName="com.sap.learning.ui5.gs.hello_world.controller.Hello" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<App id="idAppControl" class="myAppDemoWT">
+		<pages>
+			<Page title="{i18n>title}">
+				<headerContent>
+					<Button icon="sap-icon://hello-world" press="onOpenDialog" tooltip="{i18n>openDialogButtonText}"/>
+				</headerContent>
+				<content>
+					<mvc:XMLView viewName="com.sap.learning.ui5.gs.hello_world.view.HelloPanel"/>
+					<mvc:XMLView viewName="com.sap.learning.ui5.gs.hello_world.view.InvoiceList"/>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
